@@ -12,6 +12,10 @@ class FoodItemCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var protein: UILabel!
+    @IBOutlet weak var carbs: UILabel!
+    @IBOutlet weak var fats: UILabel!
+    @IBOutlet weak var cals: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

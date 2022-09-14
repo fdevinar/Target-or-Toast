@@ -9,10 +9,14 @@ import Foundation
 
 struct FoodItem {
     
-    var name:String = "food"
-    var carbs:Int = 0
-    var protein:Int = 0
-    var fats:Int = 0
-    var cals:Int = 0
+    var name:    String?
+    var protein: Int?
+    var carbs:   Int?
+    var fats:    Int?
+    var cals:    Int?
+    
+
+    
+    
     
 }
