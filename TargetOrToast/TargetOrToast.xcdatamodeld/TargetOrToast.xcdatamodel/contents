@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DailyLog" representedClassName="DailyLog" syncable="YES" codeGenerationType="class">
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MainProfile" inverseName="newRelationship2" inverseEntity="MainProfile"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProgressList" inverseName="newRelationship" inverseEntity="ProgressList"/>
+    </entity>
+    <entity name="FoodItem" representedClassName="FoodItem" syncable="YES" codeGenerationType="class">
+        <attribute name="calories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="carbs" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fats" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="protein" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodList" inverseName="newRelationship1" inverseEntity="FoodList"/>
+    </entity>
+    <entity name="FoodList" representedClassName="FoodList" syncable="YES" codeGenerationType="class">
+        <attribute name="foodItemList" optional="YES" attributeType="Transformable"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MainProfile" inverseName="newRelationship1" inverseEntity="MainProfile"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodItem" inverseName="newRelationship" inverseEntity="FoodItem"/>
+    </entity>
+    <entity name="MainProfile" representedClassName="MainProfile" syncable="YES" codeGenerationType="class">
+        <attribute name="foodList" optional="YES" attributeType="Transformable"/>
+        <attribute name="userGoals" optional="YES" attributeType="Transformable"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserGoals" inverseName="newRelationship" inverseEntity="UserGoals"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodList" inverseName="newRelationship" inverseEntity="FoodList"/>
+        <relationship name="newRelationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyLog" inverseName="newRelationship" inverseEntity="DailyLog"/>
+    </entity>
+    <entity name="ProgressList" representedClassName="ProgressList" syncable="YES" codeGenerationType="class">
+        <attribute name="calcTotalMacro" optional="YES" attributeType="Transformable"/>
+        <attribute name="foodItemxQty" optional="YES" attributeType="Transformable"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyLog" inverseName="newRelationship1" inverseEntity="DailyLog"/>
+    </entity>
+    <entity name="UserGoals" representedClassName="UserGoals" syncable="YES" codeGenerationType="class">
+        <attribute name="calories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="carbs" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fats" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="protein" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MainProfile" inverseName="newRelationship" inverseEntity="MainProfile"/>
+    </entity>
+    <elements>
+        <element name="MainProfile" positionX="657.989990234375" positionY="-10939.76881408691" width="128" height="73"/>
+        <element name="UserGoals" positionX="474.572021484375" positionY="-10883.24285888672" width="128" height="103"/>
+        <element name="FoodList" positionX="862.887939453125" positionY="-10890.34939575195" width="128" height="58"/>
+        <element name="FoodItem" positionX="866.76904296875" positionY="-10745.58395385742" width="128" height="118"/>
+        <element name="DailyLog" positionX="653.619873046875" positionY="-10763.73422241211" width="128" height="43"/>
+        <element name="ProgressList" positionX="475.701171875" positionY="-10731.86657714844" width="128" height="73"/>
+    </elements>
 </model>
