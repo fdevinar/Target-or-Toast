@@ -15,75 +15,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="998" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ChT-Vb-tJs" userLabel="RowStackView">
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ChT-Vb-tJs" userLabel="RowStackView">
                         <rect key="frame" x="20" y="10" width="968" height="87"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD9-YW-dfT">
-                                <rect key="frame" x="0.0" y="33.5" width="193.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD9-YW-dfT">
+                                <rect key="frame" x="0.0" y="15" width="914.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7LV-lD-cqR" userLabel="ProteinView">
-                                <rect key="frame" x="193.5" y="0.0" width="193.5" height="87"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="xFx-AC-7u7">
-                                        <rect key="frame" x="-50" y="4" width="194" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZY-WR-kQH">
-                                        <rect key="frame" x="144" y="33.5" width="49.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fNG-TU-zkI" userLabel="CarbsView">
-                                <rect key="frame" x="387" y="0.0" width="194" height="87"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="zeh-jd-co7">
-                                        <rect key="frame" x="-50" y="4" width="194" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-aQ-E7i">
-                                        <rect key="frame" x="144" y="33.5" width="50" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-Fy-ISE" userLabel="FatsView">
-                                <rect key="frame" x="581" y="0.0" width="193.5" height="87"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="QCU-iO-jZa">
-                                        <rect key="frame" x="-50" y="4" width="194" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-H0-Pkl">
-                                        <rect key="frame" x="144" y="33.5" width="49.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-uG-2CB" userLabel="CalsView">
-                                <rect key="frame" x="774.5" y="0.0" width="193.5" height="87"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" id="s3Z-EQ-och">
-                                        <rect key="frame" x="-50" y="4" width="194" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFN-vj-0Kh">
-                                        <rect key="frame" x="144" y="33.5" width="49.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="How-yr-ZHv">
+                                <rect key="frame" x="914.5" y="25.5" width="53.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -95,16 +41,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cals" destination="kFN-vj-0Kh" id="hCI-bp-EEp"/>
-                <outlet property="carbs" destination="QVn-aQ-E7i" id="Kex-B0-b8a"/>
-                <outlet property="fats" destination="IJ0-H0-Pkl" id="nqQ-Ws-cdc"/>
+                <outlet property="contentCell" destination="WgU-ph-K3M" id="j4q-EJ-n3r"/>
                 <outlet property="name" destination="GD9-YW-dfT" id="as0-b2-3nb"/>
-                <outlet property="protein" destination="AZY-WR-kQH" id="8z2-up-gxy"/>
+                <outlet property="unit" destination="How-yr-ZHv" id="K5X-bD-hjO"/>
             </connections>
-            <point key="canvasLocation" x="310" y="-199"/>
+            <point key="canvasLocation" x="308.69565217391306" y="-199.21875"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
-    </resources>
 </document>

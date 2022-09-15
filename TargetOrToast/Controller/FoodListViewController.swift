@@ -12,11 +12,13 @@ class FoodListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var foodItems: [FoodItem] = [
-        FoodItem(name: "Chicken", protein: 30, carbs: 0, fats: 2, cals: 160),
-        FoodItem(name: "Rice", protein: 2, carbs: 30, fats: 2, cals: 180),
-        FoodItem(name: "Olive Oil", protein: 0, carbs: 0, fats: 12, cals: 100),
-        FoodItem(name: "Eggs", protein: 6, carbs: 0, fats: 5, cals: 80),
-        FoodItem(name: "Whey", protein: 23, carbs: 15, fats: 10, cals: 240)
+        FoodItem(name: "Chicken", unit: "100g", protein: 30, carbs: 0, fats: 2, cals: 160),
+        FoodItem(name: "Rice", unit: "100g", protein: 2, carbs: 30, fats: 2, cals: 180),
+        FoodItem(name: "Olive Oil", unit: "spoon", protein: 0, carbs: 0, fats: 12, cals: 100),
+        FoodItem(name: "Eggs", unit: "unit", protein: 6, carbs: 0, fats: 5, cals: 80),
+        FoodItem(name: "Whey", unit: "dosage", protein: 23, carbs: 15, fats: 10, cals: 240),
+        FoodItem(name: "Steak", unit: "100g", protein: 30, carbs: 5, fats: 15, cals: 280),
+        FoodItem(name: "Nuts", unit: "100g", protein: 8, carbs: 4, fats: 15, cals: 300)
     ]
     
     
@@ -42,16 +44,30 @@ extension FoodListViewController: UITableViewDataSource {
     // provides cell for each row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idx = indexPath.row
+        let name = foodItems[idx].name
+        let unit = foodItems[idx].unit
+        let highMacro = foodItems[idx].getHighMacro()
+        var cellColor = UIColor(named: "white")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! FoodItemCell
         
         
-        cell.name.text = foodItems[idx].name
-        cell.protein.text = String(foodItems[idx].protein!)
-        cell.carbs.text = String(foodItems[idx].carbs!)
-        cell.fats.text = String(foodItems[idx].fats!)
-        cell.cals.text = String(foodItems[idx].cals!)
         
+        switch highMacro {
+            case "protein":
+                cellColor = .red
+            case "carbs":
+                cellColor = .yellow
+            case "fats":
+                cellColor = .green
+            default:
+                break
+        }
+        
+        cell.contentCell.backgroundColor = cellColor?.withAlphaComponent(0.4)
+        cell.name.text = name
+        cell.unit.text = "(" + unit + ")"
+
         
         return cell
         

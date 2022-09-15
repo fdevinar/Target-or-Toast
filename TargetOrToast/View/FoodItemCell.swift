@@ -9,13 +9,9 @@ import UIKit
 
 class FoodItemCell: UITableViewCell {
     
-    
+    @IBOutlet weak var contentCell: UIView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var protein: UILabel!
-    @IBOutlet weak var carbs: UILabel!
-    @IBOutlet weak var fats: UILabel!
-    @IBOutlet weak var cals: UILabel!
-    
+    @IBOutlet weak var unit: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
