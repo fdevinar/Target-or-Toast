@@ -58,7 +58,6 @@ extension FoodListViewController: UITableViewDataSource {
             default:
                 break
         }
-        
         cell.contentCell.backgroundColor = cellColor?.withAlphaComponent(0.4)
         cell.name.text = name
         cell.unit.text = "(" + unit + ")"
@@ -74,5 +73,5 @@ extension FoodListViewController: UITableViewDelegate {
         print(idx)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+    // test tot git
 }
