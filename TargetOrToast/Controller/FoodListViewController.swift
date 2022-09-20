@@ -24,12 +24,10 @@ class FoodListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-
-        // Do any additional setup after loading the view.
     }
     
     //MARK: - Add New Food Items
