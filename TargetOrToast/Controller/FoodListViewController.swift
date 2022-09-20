@@ -31,6 +31,11 @@ class FoodListViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: - Add New Food Items
+    @IBAction func clickAddButton(_ sender: UIButton) {
+        print("btn clicked")
+    }
 }
 
 //MARK: - TableView Data Source
@@ -73,5 +78,4 @@ extension FoodListViewController: UITableViewDelegate {
         print(idx)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    // test tot git
 }
