@@ -32,7 +32,20 @@ class FoodListViewController: UIViewController {
     
     //MARK: - Add New Food Items
     @IBAction func clickAddButton(_ sender: UIButton) {
-        print("btn clicked")
+        var itemName = UITextField()
+        let alert = UIAlertController(title: "Add New Food Item", message: "", preferredStyle: .alert)
+        alert.addTextField{ (alertTextField) in
+            print("alert add text field")
+            alertTextField.placeholder = "Food Name"
+            itemName = alertTextField
+        }
+        let action = UIAlertAction(title: "Add Item", style: .default) {
+            (action) in
+            self.foodItems.append(FoodItem(name: itemName.text!, unit: "test", protein: 20, carbs: 15, fats: 10, cals: 100))
+            self.tableView.reloadData()            
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
 
