@@ -21,6 +21,10 @@ class FoodListViewController: UIViewController {
         FoodItem(name: "Steak", unit: "100g", protein: 30, carbs: 5, fats: 15, cals: 280),
         FoodItem(name: "Nuts", unit: "100g", protein: 8, carbs: 4, fats: 15, cals: 300)
     ]
+    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("FoodItems.plist")
+    // Users/fdevinar/Library/Developer/CoreSimulator/Devices/E0A31B81-D69E-4E3E-905C-209B7105FE2A/data/Containers/Data/Application/1E20DAAD-1E45-4109-BD40-2F1D25EA9DBA/Documents
+    //
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +46,21 @@ class FoodListViewController: UIViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) {
             (action) in
             self.foodItems.append(FoodItem(name: itemName.text!, unit: "test", protein: 20, carbs: 15, fats: 10, cals: 100))
-            self.tableView.reloadData()            
+            self.syncItems()
         }
         alert.addAction(action)
         present(alert, animated: true)
+    }
+    
+    func syncItems() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(foodItems)
+            try data.write(to: dataFilePath!)
+        }   catch {
+            print(error)
+        }
+        tableView.reloadData()
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FoodItem {
+struct FoodItem: Codable {
     
     var name:    String
     var unit:    String
