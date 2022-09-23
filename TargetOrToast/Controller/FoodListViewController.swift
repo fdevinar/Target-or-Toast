@@ -46,13 +46,13 @@ class FoodListViewController: UIViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) {
             (action) in
             self.foodItems.append(FoodItem(name: itemName.text!, unit: "test", protein: 20, carbs: 15, fats: 10, cals: 100))
-            self.syncItems()
+            self.writeItems()
         }
         alert.addAction(action)
         present(alert, animated: true)
     }
     
-    func syncItems() {
+    func writeItems() {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(foodItems)
@@ -62,6 +62,10 @@ class FoodListViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
+    //TODO: READ ITEMS
+
+    
 }
 
 //MARK: - TableView Data Source
