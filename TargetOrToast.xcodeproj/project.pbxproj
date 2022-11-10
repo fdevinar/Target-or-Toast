@@ -16,6 +16,10 @@
 		ED80BCE928AE7B4E00AC0984 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80BCE828AE7B4E00AC0984 /* FoodListViewController.swift */; };
 		ED8EB9B828D25AA600AC40B9 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8EB9B728D25AA600AC40B9 /* FoodItemCell.xib */; };
 		ED8EB9BC28D25B0F00AC40B9 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8EB9BB28D25B0F00AC40B9 /* FoodItemCell.swift */; };
+		ED9B1D6D291C6BE9008A27C2 /* DailyLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B1D6C291C6BE9008A27C2 /* DailyLogViewController.swift */; };
+		ED9B1D71291C6EB8008A27C2 /* DailyLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B1D70291C6EB8008A27C2 /* DailyLogModel.swift */; };
+		ED9B1D73291C7114008A27C2 /* DailyItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9B1D72291C7114008A27C2 /* DailyItemCell.xib */; };
+		ED9B1D75291C7146008A27C2 /* DailyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B1D74291C7146008A27C2 /* DailyItemCell.swift */; };
 		EDDE525D28AAE9AE005D6FA7 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE525C28AAE9AE005D6FA7 /* FoodListModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		ED80BCE828AE7B4E00AC0984 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		ED8EB9B728D25AA600AC40B9 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		ED8EB9BB28D25B0F00AC40B9 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		ED9B1D6C291C6BE9008A27C2 /* DailyLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogViewController.swift; sourceTree = "<group>"; };
+		ED9B1D70291C6EB8008A27C2 /* DailyLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogModel.swift; sourceTree = "<group>"; };
+		ED9B1D72291C7114008A27C2 /* DailyItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyItemCell.xib; sourceTree = "<group>"; };
+		ED9B1D74291C7146008A27C2 /* DailyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItemCell.swift; sourceTree = "<group>"; };
 		EDDE525C28AAE9AE005D6FA7 /* FoodListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDE525C28AAE9AE005D6FA7 /* FoodListModel.swift */,
+				ED9B1D70291C6EB8008A27C2 /* DailyLogModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +98,7 @@
 			children = (
 				ED80BCE628AE7B0400AC0984 /* WelcomeViewController.swift */,
 				ED80BCE828AE7B4E00AC0984 /* FoodListViewController.swift */,
+				ED9B1D6C291C6BE9008A27C2 /* DailyLogViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 				ED7E6C9C28A83249007F8ECC /* Main.storyboard */,
 				ED8EB9B728D25AA600AC40B9 /* FoodItemCell.xib */,
 				ED8EB9BB28D25B0F00AC40B9 /* FoodItemCell.swift */,
+				ED9B1D72291C7114008A27C2 /* DailyItemCell.xib */,
+				ED9B1D74291C7146008A27C2 /* DailyItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				ED8EB9B828D25AA600AC40B9 /* FoodItemCell.xib in Resources */,
 				ED7E6CA628A8324F007F8ECC /* LaunchScreen.storyboard in Resources */,
 				ED7E6CA328A8324F007F8ECC /* Assets.xcassets in Resources */,
+				ED9B1D73291C7114008A27C2 /* DailyItemCell.xib in Resources */,
 				ED7E6C9E28A83249007F8ECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,8 +192,11 @@
 				EDDE525D28AAE9AE005D6FA7 /* FoodListModel.swift in Sources */,
 				ED80BCE928AE7B4E00AC0984 /* FoodListViewController.swift in Sources */,
 				ED80BCE728AE7B0400AC0984 /* WelcomeViewController.swift in Sources */,
+				ED9B1D71291C6EB8008A27C2 /* DailyLogModel.swift in Sources */,
+				ED9B1D75291C7146008A27C2 /* DailyItemCell.swift in Sources */,
 				ED7E6C9728A83249007F8ECC /* AppDelegate.swift in Sources */,
 				ED7E6C9928A83249007F8ECC /* SceneDelegate.swift in Sources */,
+				ED9B1D6D291C6BE9008A27C2 /* DailyLogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
