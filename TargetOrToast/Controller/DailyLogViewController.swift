@@ -45,7 +45,16 @@ extension DailyLogViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DailyItemIdentifier", for: indexPath) as! DailyItemCell
         
         cell.name.text = name
-        cell.qty.text = String(qty)
+        
+        var sum = ""
+        
+        for el in 0...qty {
+            print(el)
+            sum+="O "
+        }
+        
+        cell.qty.text = sum
+        
         return cell
     }
     
